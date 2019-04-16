@@ -94,7 +94,7 @@ public class CustomerController {
 		String a = name;
 		String b = password;
 
-		if (a.equals("robert") && b.equals("wadra")) {
+		if (a.equals("troney") && b.equals("bora")) {
 			modelAndView = new ModelAndView("addcustomer");
 			return modelAndView;
 		} else {

@@ -8,14 +8,13 @@
 </head>
 <body>
 	<h3>Banking System</h3>
-    <br>
-    <br>
-    <br>
-	Pick Your Option
+	<br>
+	<br>
+	<br> Pick Your Option
 	<br>
 	<br>
 	<br>
-	<a href="../addmoney.jsp">add money</a>
+	<a href="../addmoney.jsp">Add money</a>
 	<br>
 	<br>
 	<br>
@@ -24,10 +23,10 @@
 	<br>
 	<br>
 
-	<a href="../customer/balance">retreiving balance</a>
+	<a href="../customer/balance">Show balance</a>
 	<br>
 	<br>
-    <br>
+	<br>
 	<a href="../tranfermoney.jsp">Money Transfer</a>
 	<br>
 	<br>
@@ -37,11 +36,9 @@
 	<br>
 	<br>
 	<a href="../customer/transaction">print transaction</a>
-
-
-
-
-
-
+	<br>
+	<br>
+	<br>
+	<a href="../index.jsp">logout</a>
 </body>
 </html>
