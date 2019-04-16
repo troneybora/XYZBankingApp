@@ -8,9 +8,9 @@
 </head>
 <body>
 
-	<h3>Login</h3>
+	<h3 align="center">Login</h3>
 	<form action="customer/checkuser" method="post">
-		<table border="1">
+		<table border="1" align="center">
 
 			<tr>
 				<th>Account</th>

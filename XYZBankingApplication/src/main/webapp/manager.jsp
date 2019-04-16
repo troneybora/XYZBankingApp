@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="customer/manager" method="Post">
-		<table border="1">
+		<table border="1" align="center">
 			<tr>
 				<th>Manger UserName</th>
 				<td><input type="text" name="name" required autofocus /></td>
