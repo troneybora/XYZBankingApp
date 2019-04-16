@@ -24,9 +24,9 @@ public class CustomerController {
 	private CustomerServiceImpl service;
 	@Autowired
 	private ITransactionService service1;
-	
+
 //saving the the customer in the database 
-	
+
 	@PostMapping("/saveee")
 	public ModelAndView save(@RequestParam String name, @RequestParam String password) {
 		Customer customerlist = new Customer();
@@ -41,7 +41,7 @@ public class CustomerController {
 		return modelAndView;
 	}
 // for changing the password as account is created by manager so we need to change the password for future reference and safety
-	
+
 	@PostMapping("/pass")
 	public ModelAndView changepassword(@RequestParam String previouspassword, @RequestParam String password) {
 		Customer customer = service.findById(temp);
@@ -64,16 +64,18 @@ public class CustomerController {
 		}
 
 	}
+
 // for checking the balance
 	@GetMapping("/balance")
 	public ModelAndView getbalancefromid() {
 		Customer customer = service.findById(temp);
-	int balance=	customer.getBalance();
+		int balance = customer.getBalance();
 		ModelAndView modelAndView = new ModelAndView("showbalance");
 
 		modelAndView.addObject("AA", balance);
 		return modelAndView;
 	}
+
 //for printing the transaction done by a particular user
 	@GetMapping("/transaction")
 	public ModelAndView gettransaction() {
@@ -84,6 +86,7 @@ public class CustomerController {
 		modelAndView.addObject("PRINT", list1);
 		return modelAndView;
 	}
+
 //manager login
 	@PostMapping("/manager")
 	public ModelAndView ManagerLogin(@RequestParam String name, @RequestParam String password) {
@@ -99,6 +102,7 @@ public class CustomerController {
 		}
 		return modelAndView;
 	}
+
 // login of customer
 	@PostMapping("checkuser")
 	public ModelAndView requestLogin(@RequestParam int user, @RequestParam String password) {
@@ -113,6 +117,7 @@ public class CustomerController {
 			return modelAndView;
 		}
 	}
+
 // deposit money
 	@PostMapping("/add")
 	public ModelAndView addbalance(@RequestParam Integer money) {
@@ -132,6 +137,7 @@ public class CustomerController {
 		modelAndView.addObject("AA", customer);
 		return modelAndView;
 	}
+
 // withdraw money
 	@PostMapping("/withdraw")
 	public ModelAndView withdrawbalance(@RequestParam Integer money) {
@@ -157,11 +163,11 @@ public class CustomerController {
 			return modelAndView;
 		}
 	}
+
 //fund transferS
 	@PostMapping("/transfer")
 	public ModelAndView FundTransfer(@RequestParam Integer id, @RequestParam Integer money) {
 
-		
 		int sendingmoney = money;
 		Customer receiver = service.findById(id);
 		int Receiverbalance = receiver.getBalance();

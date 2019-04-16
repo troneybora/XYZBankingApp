@@ -8,16 +8,16 @@ import org.springframework.stereotype.Service;
 import com.cg.xyzbankapplication.dao.ITransactionDao;
 import com.cg.xyzbankapplication.model.Transaction;
 
-
 @Service("service1")
 public class TransactionServiceImpl implements ITransactionService {
 
 	@Autowired
 	ITransactionDao transactiondao;
+
 	@Override
 	public List<Transaction> findByCustomerId(int id) {
-		List<Transaction> list=transactiondao.findByCustomerId(id);
-		
+		List<Transaction> list = transactiondao.findByCustomerId(id);
+
 		return list;
 	}
 }
