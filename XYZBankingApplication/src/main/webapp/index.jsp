@@ -5,12 +5,24 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	rel="stylesheet">
+
 </head>
 <body>
-
-	<a href="../manager.jsp">login as manager</a>
-	<br>
-	<a href="../login.jsp">login as customer</a>
-
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Manager Login</th>
+				<th>Customer Login</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="../manager.jsp">login</a></td>
+				<td><a href="../login.jsp">login</a></td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>

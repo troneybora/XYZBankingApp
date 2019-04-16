@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="customer/manager" method="Post">
-		Manger UserName<input type="text" name="name" required autofocus /> <br>
-		Manager Password Password<input type="text" name="password"> 
-		<input type="submit" value="add customer">
-		</form>
+	<form action="customer/manager" method="Post">
+		<table border="1">
+			<tr>
+				<th>Manger UserName</th>
+				<td><input type="text" name="name" required autofocus /></td>
+			</tr>
+			<tr>
+				<th>Manager Password Password</th>
+				<td><input type="text" name="password"></td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th><input type="submit" value="add customer"></th>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
