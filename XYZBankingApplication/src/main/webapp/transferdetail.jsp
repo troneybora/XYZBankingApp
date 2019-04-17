@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<h1>${{TRANSFERDETAILS.name}} Your Account Balance Is ${TRANSFERDETAILS.balance}</h1>
+	<h1>${TRANSFERDETAILS.name} Your Account Balance Is ${TRANSFERDETAILS.balance}</h1>
 	<a href="../home.jsp">Home</a>
 </body>
 </html>
