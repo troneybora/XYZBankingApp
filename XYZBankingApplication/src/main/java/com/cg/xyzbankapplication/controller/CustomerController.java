@@ -54,7 +54,7 @@ public class CustomerController {
 
 			ModelAndView modelAndView = new ModelAndView("showstatus");
 
-			modelAndView.addObject("AA", customer);
+			modelAndView.addObject("SHOWSTATUS", customer);
 			return modelAndView;
 
 		} else {
@@ -72,7 +72,7 @@ public class CustomerController {
 		int balance = customer.getBalance();
 		ModelAndView modelAndView = new ModelAndView("showbalance");
 
-		modelAndView.addObject("AA", balance);
+		modelAndView.addObject("SHOWBALANCE", balance);
 		return modelAndView;
 	}
 
@@ -80,7 +80,7 @@ public class CustomerController {
 	@GetMapping("/transaction")
 	public ModelAndView gettransaction() {
 
-		List<Transaction> list1 = service1.findByCustomerId(temp);
+		List<Transaction> list1 = service1.findTop10ByCustomerId(temp);
 		ModelAndView modelAndView = new ModelAndView("receipt");
 
 		modelAndView.addObject("PRINT", list1);
@@ -134,7 +134,7 @@ public class CustomerController {
 
 		ModelAndView modelAndView = new ModelAndView("updatedbalance");
 
-		modelAndView.addObject("AA", customer);
+		modelAndView.addObject("UPDATEBALANCE", customer);
 		return modelAndView;
 	}
 
@@ -145,7 +145,7 @@ public class CustomerController {
 		Customer customer = service.findById(temp);
 		int customermoney = customer.getBalance();
 		if (customermoney - money < 0) {
-			ModelAndView modelAndView = new ModelAndView("accountinsfficient");
+			ModelAndView modelAndView = new ModelAndView("accountinsufficient");
 			return modelAndView;
 		} else {
 			Transaction tran1 = new Transaction();
@@ -159,7 +159,7 @@ public class CustomerController {
 
 			ModelAndView modelAndView = new ModelAndView("updatedbalance");
 
-			modelAndView.addObject("AA", customer);
+			modelAndView.addObject("UPDATEBALANCE", customer);
 			return modelAndView;
 		}
 	}
@@ -174,7 +174,7 @@ public class CustomerController {
 		Customer sender = service.findById(temp);
 		int Senderbalance = sender.getBalance();
 		if (Senderbalance - sendingmoney < 0) {
-			ModelAndView modelAndView = new ModelAndView("accountinsfficient");
+			ModelAndView modelAndView = new ModelAndView("accountinsufficient");
 			return modelAndView;
 		} else {
 			Transaction tran3 = new Transaction();
@@ -196,8 +196,8 @@ public class CustomerController {
 
 			ModelAndView modelAndView = new ModelAndView("transferdetail");
 
-			modelAndView.addObject("AA", receiver);
-			modelAndView.addObject("BB", sender);
+			
+			modelAndView.addObject("TRANSFERDETAILS", sender);
 			return modelAndView;
 		}
 	}

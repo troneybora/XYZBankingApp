@@ -8,5 +8,5 @@ import com.cg.xyzbankapplication.model.Transaction;
 
 public interface ITransactionDao extends JpaRepository<Transaction, Integer> {
 
-	public List<Transaction> findByCustomerId(int id);
+	public List<Transaction> findTop10findByCustomerId(int id);
 }

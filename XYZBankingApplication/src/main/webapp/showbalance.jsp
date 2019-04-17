@@ -8,7 +8,7 @@
 </head>
 <body>
  
- <h1> Your account balance is   ${{AA}} </h1>
+ <h1> Your account balance is   ${SHOWBALANCE} </h1>
  <a href="../home.jsp" >Home</a>
 </body>
 </html>

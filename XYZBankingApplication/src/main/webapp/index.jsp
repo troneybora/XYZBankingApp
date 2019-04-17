@@ -7,10 +7,11 @@
 <title>Insert title here</title>
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
 	rel="stylesheet">
-
+	<style>body{background-color:blue;} </style>
 </head>
-<body>
-	<table border="1">
+<body >
+	<h3 align="center">XYZ BANKING APPLICATION</h3>
+	<table border="1" align="center">
 		<thead>
 			<tr>
 				<th>Manager Login</th>

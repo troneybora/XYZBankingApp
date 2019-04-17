@@ -15,9 +15,8 @@ public class TransactionServiceImpl implements ITransactionService {
 	ITransactionDao transactiondao;
 
 	@Override
-	public List<Transaction> findByCustomerId(int id) {
-		List<Transaction> list = transactiondao.findByCustomerId(id);
-
+	public List<Transaction> findTop10ByCustomerId(int id) {
+		List<Transaction> list = transactiondao.findTop10findByCustomerId(id); 
 		return list;
 	}
 }
