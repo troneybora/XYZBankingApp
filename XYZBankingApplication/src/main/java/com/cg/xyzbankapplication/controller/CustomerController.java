@@ -33,7 +33,7 @@ public class CustomerController {
 		customerlist.setName(name);
 		customerlist.setPassword(password);
 		customerlist.setBalance(0);
-
+		
 		service.save(customerlist);
 		List<Customer> customerlist1 = service.findAll();
 		ModelAndView modelAndView = new ModelAndView("customerlist");
